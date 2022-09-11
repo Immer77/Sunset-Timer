@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{   
+    background: url(images/sunset.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 50px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    background: black;
+}
+
+header .navigation
+{
+    display: none;
+}
+header .navigation li a
+{
+    display: inline-block;
+    color:#FDDA0D;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    padding: 8px 20px;
+}
+header .navigation li b
+{
+    display: inline-block;
+    background:#1E8449;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    border-radius: 40px;
+    padding: 8px 40px;
+}
+header .navigation.active
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color:#FDDA0D;
+    font-size:x-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    list-style: none
+}
+section
+{
+    padding: 130px 30px;
+}
+.content
+{
+    flex-direction: column;
+}
+.content .TimerBox .button 
+{
+    position: relative;
+    margin: 1.25%;
+    margin-top: 0.05%;
+    height: 120px;
+    width: 22%;
+    padding: 0;
+    background: #FDDA0D;
+    color: #1E8449;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: large;
+    font-weight: 500;
+    overflow: hidden;
+}
+.content .HourBox .time 
+{
+    position: relative;
+    margin: 1.25%;
+    height: 40px;
+    width: 22%;
+    background: #FDDA0D;
+    color: #1E8449;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    overflow: hidden;
+    font-size: large;
+    font-weight: 500;
+}
+.content .TimerBox .button:active
+{
+    background:#c5aa14;
+}
+.toggle
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(images/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 10000;
+}
+.toggle.active
+{
+    position: fixed;
+    right: 50px;
+    margin-top: 30px;
+    background: url(images/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media (max-width: 750px)
+{
+    .content .TimerBox .button 
+    {
+        margin: 1.15%;
+        height: 80px;
+        width: 22%;
+        font-size: medium;
+    }
+    .content .HourBox .time 
+    {
+        position: relative;
+        margin: 1.15%;
+        height: 25px;
+        width: 22%;
+        font-size: medium;
+    }
+    header
+    {
+        width: 100%;
+        padding: 20px 30px;
+    }
+    section
+    {
+        padding: 90px 20px;
+    }
+}
+
+@media (max-width: 550px)
+{
+    .content .TimerBox .button 
+    {
+        margin: 1%;
+        height: 80px;
+        width: 21%;
+        font-size: x-small;
+    }
+    .content .HourBox .time 
+    {
+        position: relative;
+        margin: 1%;
+        height: 20px;
+        width: 21%;
+        font-size: x-small;
+    }
+    section
+    {
+        padding: 80px 10px;
+    }
+}
